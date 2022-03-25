@@ -22,6 +22,7 @@ export const UserInputWrap = styled.div`
 export const Label = styled.label`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background-color: #FFFFFF;
   color: #212121;
@@ -47,8 +48,8 @@ export const Input = styled.input`
   background-color: #FFFFFF;
   color: #212121;
   outline: none;
-  border: 1px solid #212121;
-  border-radius: 999px;
+  border: none;
+  border-bottom: 1px solid #212121;
   padding: 0.8rem 1rem;
   width: 80%;
 `;

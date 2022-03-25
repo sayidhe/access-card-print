@@ -7,7 +7,7 @@ import EnName from './EnName'
 import CnName from './CnName'
 import { Button } from '../styled/UserInputSection'
 //import Tilt from 'react-tilt'
-import Logo from '../logo.svg'
+import LogoSymbol from '../assets/logo-symbol.svg'
 
 
 const Card = (props) => {
@@ -22,7 +22,7 @@ const Card = (props) => {
   const cardWithStylesJSX = (
     <CardStyled className="card" id="card">
       <LogoStyled>
-        <img src={Logo} alt="Wiredcraft Logo" />
+        <img src={LogoSymbol} alt="Wiredcraft Logo" />
       </LogoStyled>
       <ImageWrapperStyled>
         <ImageLayer image_src={src.img_src} />
