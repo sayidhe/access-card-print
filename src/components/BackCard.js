@@ -3,7 +3,7 @@ import { CardStyled, CardWrap, Center } from '../styled/StyledCard'
 import { CoverHeadingStyled } from '../styled/Headings'
 import { LogoWordmarkStyled } from '../styled/Logos'
 import { Button } from '../styled/UserInputSection'
-import LogoWordmark from '../assets/logo-wordmark.svg'
+import { ReactComponent as LogoWordmark }  from '../assets/logo-wordmark.svg'
 
 
 const BackCard = (props) => {
@@ -16,10 +16,10 @@ const BackCard = (props) => {
 
   // card JSX element
   const cardWithStylesJSX = (
-    <CardStyled className="card" id="back-card">
+    <CardStyled className="card" id="back-card" colors={props.colors} >
       <Center>
-        <LogoWordmarkStyled>
-          <img src={LogoWordmark} alt="Logo WOrdmark" />
+        <LogoWordmarkStyled colors={props.colors} >
+          <LogoWordmark />
         </LogoWordmarkStyled>
       </Center>
     </CardStyled>
@@ -28,7 +28,7 @@ const BackCard = (props) => {
   return (
     <>
       <CardWrap id="cardwrap">
-        <CoverHeadingStyled>Cover preview</CoverHeadingStyled>
+        <CoverHeadingStyled>Backcover preview</CoverHeadingStyled>
         {cardWithStylesJSX}
         <Button className="for-mobile download_btn" disabled={props.downloadable ? false : true} title={props.downloadable ? "" : "Please fill out all fields"} onClick={() => { props.download_fun() }}><div className="content">Download<i className={props.download_state ? "fas fa-circle-notch load" : "fas fa-download"}></i>{!props.downloadable && <div className="warn">Please fill out all the fields</div>}</div></Button>
       </CardWrap>

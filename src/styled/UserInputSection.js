@@ -7,7 +7,8 @@ export const UserInputWrap = styled.div`
   //justify-content: center;
   gap: 2rem;
   width: 40%;
-  padding: 0 0 2rem 1rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
 
   #image {
     display: none;
@@ -16,6 +17,8 @@ export const UserInputWrap = styled.div`
   @media screen and (max-width: 45em) {
     width: 80%;
     align-items: center;
+    padding: 1rem;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -24,7 +27,7 @@ export const Label = styled.label`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #212121;
   transition: color 0.3s ease-in-out;
   outline: none;
@@ -45,13 +48,18 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #212121;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #212121;
   padding: 0.8rem 1rem;
   width: 80%;
+  border-radius: 0;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #212121; 
+
+  &:focus {
+    border-color: #999;
+  }
 `;
 
 export const Button = styled.button`
@@ -66,6 +74,24 @@ export const Button = styled.button`
   margin-bottom: 2rem;
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   opacity: ${props => props.disabled ? 0.3 : 1};
+
+  .content{
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+
+    > i{
+      margin-left: 0.5rem;
+    }
+
+    .warn{
+      margin-top: 0.3rem;
+      font-size: 0.6rem;
+      font-style: italic;
+      color: #EB4847;
+      position: absolute;
+      top: 2rem;
+    }
+  }
 
   > i{
     margin-left: 1rem;
@@ -97,25 +123,49 @@ export const Button = styled.button`
       display: block;
       margin-top: 2rem;
 
-      .content{
-        font-family: 'Poppins', sans-serif;
-        position: relative;
-
-        > i{
-          margin-left: 0.5rem;
-        }
-
-        .warn{
-          margin-top: 0.3rem;
-          font-size: 0.6rem;
-          font-style: italic;
-          position: absolute;
-          top: 2rem;
-        }
-      }
     }
     &.for-desktop{
       display: none;
     }
   }
+`;
+
+export const ThemesWrap = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    gap: 1rem;
+    font-size: 0.85rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: #eee;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+
+    @media screen and (max-width: 45em){
+        justify-content: center;
+        p{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    p{
+        color: #6e6e6e;
+        margin: 0;
+    }
+`;
+
+export const SelectTheme = styled.div`
+    height: 2rem;
+    width: 2rem;
+    border: 0.2rem solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 0 0 1rem 0rem #EB4847;
+    }
 `;

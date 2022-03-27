@@ -8,21 +8,18 @@ export const CardWrap = styled.div`
   background-color: #212121;
   height: 100%;
   width: 40%;
-  position: sticky;
   top: 2rem;
   padding: 2rem 0 4rem 0;
-  margin-bottom: 4rem;
 
   @media screen and (max-width: 45em){
     width: 80%;
-    margin-bottom: 2rem;
   }
 `;
 
 export const CardStyled = styled.div`
+  background-color: ${props => props.colors.cardBackgroundColor};
   width: 5.4cm;
   height: 8.55cm;
-  background-color: #fff;
   border: 1px solid #000;
   border-radius: 0.4cm;
   overflow: hidden;
@@ -59,4 +56,10 @@ export const Center = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const A4WrapStyled = styled.div`
+  width: 29.7cm;
+  height: 21cm;
+  display: block;
 `;

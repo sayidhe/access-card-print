@@ -20,7 +20,7 @@ const Card = (props) => {
 
   // card JSX element
   const cardWithStylesJSX = (
-    <CardStyled className="card" id="card">
+    <CardStyled className="card" id="card" colors={props.colors}>
       <LogoStyled>
         <img src={LogoSymbol} alt="Wiredcraft Logo" />
       </LogoStyled>
@@ -31,7 +31,7 @@ const Card = (props) => {
         <NameWrapperStyled>
           {props.cn_name ? console.log("有中文名"):console.log("没有中文名")}
           <EnName en_name={props.en_name}></EnName>
-          <CnName cn_name={props.cn_name}></CnName>
+          <CnName cn_name={props.cn_name} className="cn-name"></CnName>
         </NameWrapperStyled>
       </MainContentWrapperStyled>
     </CardStyled>
@@ -52,7 +52,11 @@ const Card = (props) => {
 Card.defaultProps = {
   en_name: "Sami",
   cn_name: "一只喵",
-  image_src: img_location
+  image_src: img_location,
+  colors: {
+    cardBackgroundColor: "#FFFFFF",
+    nameColor: "#000000"
+  }
 }
 
 export default Card

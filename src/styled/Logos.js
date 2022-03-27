@@ -8,7 +8,10 @@ export const LogoStyled = styled.div`
 `;
 
 export const LogoWordmarkStyled = styled.div`
-  img {
+  svg {
     width: .6cm;
+    g {
+      fill: ${props => props.colors.logoColor}
+    }
   }
 `;

@@ -88,7 +88,6 @@ const Cover = () => {
       quality: 1.0,
     }).then((dataUrl) => {
       download(dataUrl, 'access_card_image')
-
       setDownloadState(true);
 
       setTimeout(() => {
@@ -128,7 +127,8 @@ const Cover = () => {
           <Input type="file" id="image" accept="image/*" placeholder="Upload an image" required onChange={(e) => { setIsImageModified({status: true, fileType: e.target.files[0].type.split("/")[0], target: e.target}); input_check(); }} />
           <Input type="text" id="en_name" name="en_name" placeholder="Your English name?" required autoComplete="off" value={inputs.en_name || ""} onChange={(e) => {inputChange(e); input_check();}} />
           <Input type="text" id="cn_name" name="cn_name" placeholder="Your Chinese name?" autoComplete="off" value={inputs.cn_name || ""} onChange={(e) => {inputChange(e); input_check();}} />
-          <Button className="for-desktop download_btn" disabled={downloadable ? false : true} title={downloadable ? "" : "Please fill out all fields"} onClick={() => { download_image() }}>Download<i className={downloadState ? "fas fa-circle-notch load" : "fas fa-download"}></i></Button>
+          <Button className="for-desktop download_btn" disabled={downloadable ? false : true} title={downloadable ? "" : "Please fill out all fields"} onClick={() => { download_image() }}><div className="content">Download<i className={downloadState ? "fas fa-circle-notch load" : "fas fa-download"}></i>{!downloadable && <div className="warn">Please fill out all the fields</div>}</div></Button>
+
         </UserInputWrap>
         <Card image_src={image} en_name={props_conf('en_name')} cn_name={props_conf('cn_name')} download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} />
       </div>
