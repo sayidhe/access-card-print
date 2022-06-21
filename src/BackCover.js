@@ -84,7 +84,6 @@ const BackCover = () => {
             <SelectTheme onClick={(e) => { colorChange(e)}} style={{ backgroundColor: 'white'}} />
           </ThemesWrap>
           <Button className="for-desktop download_btn" disabled={downloadable ? false : true} title={downloadable ? "" : "Please fill out all fields"} onClick={() => { download_image() }}>Download<i className={downloadState ? "fas fa-circle-notch load" : "fas fa-download"}></i></Button>
-
         </UserInputWrap>
         <BackCard download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} colors={colors} />
       </div>

@@ -128,7 +128,6 @@ const Cover = () => {
           <Input type="text" id="en_name" name="en_name" placeholder="Your English name?" required autoComplete="off" value={inputs.en_name || ""} onChange={(e) => {inputChange(e); input_check();}} />
           <Input type="text" id="cn_name" name="cn_name" placeholder="Your Chinese name?" autoComplete="off" value={inputs.cn_name || ""} onChange={(e) => {inputChange(e); input_check();}} />
           <Button className="for-desktop download_btn" disabled={downloadable ? false : true} title={downloadable ? "" : "Please fill out all fields"} onClick={() => { download_image() }}><div className="content">Download<i className={downloadState ? "fas fa-circle-notch load" : "fas fa-download"}></i>{!downloadable && <div className="warn">Please fill out all the fields</div>}</div></Button>
-
         </UserInputWrap>
         <Card image_src={image} en_name={props_conf('en_name')} cn_name={props_conf('cn_name')} download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} />
       </div>
