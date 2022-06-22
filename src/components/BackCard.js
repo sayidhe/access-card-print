@@ -2,7 +2,7 @@ import img_location from '../assets/default.gif'
 import { CardStyled, CardWrap, Center } from '../styled/StyledCard'
 import { CoverHeadingStyled } from '../styled/Headings'
 import { LogoWordmarkStyled } from '../styled/Logos'
-import { Button } from '../styled/UserInputSection'
+// import { Button } from '../styled/UserInputSection'
 import { ReactComponent as LogoWordmark }  from '../assets/logo-wordmark.svg'
 
 
@@ -30,7 +30,7 @@ const BackCard = (props) => {
       <CardWrap id="cardwrap">
         <CoverHeadingStyled>Backcover preview</CoverHeadingStyled>
         {cardWithStylesJSX}
-        <Button className="for-mobile download_btn" disabled={props.downloadable ? false : true} title={props.downloadable ? "" : "Please fill out all fields"} onClick={() => { props.download_fun() }}><div className="content">Download<i className={props.download_state ? "fas fa-circle-notch load" : "fas fa-download"}></i>{!props.downloadable && <div className="warn">Please fill out all the fields</div>}</div></Button>
+        {/* <Button className="for-mobile download_btn" disabled={props.downloadable ? false : true} title={props.downloadable ? "" : "Please fill out all fields"} onClick={() => { props.download_fun() }}><div className="content">Download<i className={props.download_state ? "fas fa-circle-notch load" : "fas fa-download"}></i>{!props.downloadable && <div className="warn">Please fill out all the fields</div>}</div></Button> */}
       </CardWrap>
     </>
   )

@@ -1,13 +1,11 @@
 import './App.css'
-import Cover from "./Cover"
-import BackCover from "./BackCover"
+import A4 from "./A4"
 
 function App() {
   return (
     <>
       <div id="main">
-        <Cover />
-        <BackCover />
+        <A4 />
       </div>
     </>
   );

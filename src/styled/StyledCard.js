@@ -5,11 +5,9 @@ export const CardWrap = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #212121;
+  background-color: #fff;
   height: 100%;
-  width: 40%;
-  top: 2rem;
-  padding: 2rem 0 4rem 0;
+  width: 50%;
 
   @media screen and (max-width: 45em){
     width: 80%;
@@ -48,6 +46,7 @@ export const CnNameStyled= styled.div`
   font-family: 'Pingfang SC', sans-serif;
   font-weight: 400;
   text-align: center;
+  display: block;
 `;
 
 export const Center = styled.div`

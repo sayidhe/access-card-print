@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 import * as htmlToImage from 'html-to-image'
 import download from 'downloadjs'
 
-
 const BackCover = () => {
 
   const [downloadState, setDownloadState] = useState(false);

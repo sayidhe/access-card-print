@@ -4,18 +4,17 @@ export const UserInputWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
-  gap: 2rem;
+  // justify-content: center;
+  gap: 1.5rem;
   width: 40%;
   padding: 2rem;
-  background-color: #f5f5f5;
 
   #image {
     display: none;
   }
 
   @media screen and (max-width: 45em) {
-    width: 80%;
+    width: 100%;
     align-items: center;
     padding: 1rem;
     padding-bottom: 4rem;
@@ -168,4 +167,13 @@ export const SelectTheme = styled.div`
     &:hover{
         box-shadow: 0 0 1rem 0rem #EB4847;
     }
+`;
+
+export const ButtonWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  gap: 1rem;
 `;
