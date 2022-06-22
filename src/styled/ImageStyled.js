@@ -20,6 +20,7 @@ export const StyledImage = styled.img`
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  object-fit: cover;
   // background-color: transparent;
   // background-image: url(${props => props.image_src});
   // background-position: center;
