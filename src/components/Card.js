@@ -23,11 +23,11 @@ const Card = (props) => {
   const cardWithStylesJSX = (
     <CardStyled className="card" id="card" colors={props.colors}>
       <LogoStyled>
-        <img src={LogoSymbol} alt="Wiredcraft Logo" />
+        <img crossOrigin="anonymous" src={LogoSymbol} alt="Wiredcraft Logo" />
       </LogoStyled>
       <ImageWrapperStyled>
         <ImageLayer>
-          <StyledImage src={src.img_src}></StyledImage>
+          <StyledImage crossOrigin="anonymous" src={src.img_src}></StyledImage>
         </ImageLayer>
       </ImageWrapperStyled>
       <MainContentWrapperStyled>
