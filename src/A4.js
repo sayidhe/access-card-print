@@ -102,7 +102,6 @@ const A4 = () => {
   function print_image() {
     setDownloadState(true);
     window.print();
-    window.close();
     setTimeout(() => {
       setDownloadState(false);
     }, 1000)
