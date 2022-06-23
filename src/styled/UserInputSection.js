@@ -138,7 +138,7 @@ export const ThemesWrap = styled.div`
     gap: 1rem;
     font-size: 0.85rem;
     font-family: 'Manrope', sans-serif;
-    background-color: #eee;
+    background-color: #FAD1D1;
     padding: 0.7rem 1rem;
     border-radius: 0.4rem;
 
