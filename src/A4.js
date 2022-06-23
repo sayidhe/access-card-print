@@ -8,7 +8,7 @@ import img_location from './assets/default.gif'
 import * as htmlToImage from 'html-to-image'
 import download from 'downloadjs'
 import BackCard from "./components/BackCard"
-
+import Tilt from 'react-parallax-tilt';
 
 const A4 = () => {
 
@@ -187,10 +187,17 @@ const A4 = () => {
         </UserInputWrap>
       </div>
       <div id="a4-view" className="a4-view">
-        <A4PageStyled id="a4-paper">
-          <Card image_src={image} en_name={props_conf('en_name')} cn_name={props_conf('cn_name')} download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} />
-          <BackCard download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} colors={colors} />
-        </A4PageStyled>
+        <Tilt
+          id="tilt"
+          tiltMaxAngleX={3}
+          tiltMaxAngleY={3}
+          perspective={1200}
+        >
+          <A4PageStyled id="a4-paper">
+            <Card image_src={image} en_name={props_conf('en_name')} cn_name={props_conf('cn_name')} download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} />
+            <BackCard download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} colors={colors} />
+          </A4PageStyled>
+        </Tilt>
       </div>
     </>
   );

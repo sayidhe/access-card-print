@@ -93,13 +93,15 @@ code {
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden;
-    -webkit-print-color-adjust:exact;
   }
   body * {
     visibility: hidden;
   }
   .a4-view {
     zoom: 100%;
+  }
+  .tilt {
+    all:revert;
   }
   #a4-paper, #a4-paper * {
     visibility: visible;
