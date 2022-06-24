@@ -16,8 +16,8 @@ export const CardWrap = styled.div`
 
 export const CardStyled = styled.div`
   background-color: ${props => props.colors.cardBackgroundColor};
-  width: 5.4cm;
-  height: 8.55cm;
+  width: 5.5cm;
+  height: 8.6cm;
   border: 1px solid #000;
   border-radius: 0.4cm;
   overflow: hidden;
