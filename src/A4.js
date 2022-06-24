@@ -211,7 +211,7 @@ const A4 = () => {
           tiltMaxAngleY={3}
           perspective={1200}
         >
-          <A4PageStyled id="a4-paper">
+          <A4PageStyled id="a4-paper" unselectable="on" className="unselectable">
             <Card image_src={image} en_name={props_conf('en_name')} cn_name={props_conf('cn_name')} download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} />
             <BackCard download_fun={download_image} download_state={downloadState} downloadable={downloadable} breakpoint={breakpoint} colors={colors} />
           </A4PageStyled>
