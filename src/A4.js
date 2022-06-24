@@ -85,12 +85,17 @@ const A4 = () => {
 
   function download_image() {
     setDownloadState(true);
+    // document.getElementById("a4-paper").style.borderRadius = "0";
     const node = document.querySelector("#a4-paper");
+    node.style.borderRadius = "unset";
+    node.style.boxShadow = "unset";
     htmlToImage.toPng(node, {
       quality: 1.0,
     }).then((dataUrl) => {
       download(dataUrl, 'access_card_image')
       setDownloadState(true);
+      node.style.borderRadius = "1cm";
+      node.style.boxShadow = "0 0 0.5cm rgba(0,0,0,0.2)";
 
       setTimeout(() => {
         setDownloadState(false);
