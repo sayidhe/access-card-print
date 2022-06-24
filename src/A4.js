@@ -99,8 +99,21 @@ const A4 = () => {
     })
   }
 
+  function removeStyles(el) {
+    el.removeAttribute('style');
+
+    if (el.childNodes.length > 0) {
+      for (let child in el.childNodes) {
+        /* filter element nodes only */
+        if (el.childNodes[child].nodeType === 1)
+          removeStyles(el.childNodes[child]);
+      }
+    }
+  }
+
   function print_image() {
     setDownloadState(true);
+    removeStyles(document.getElementById('a4-view'));
     window.print();
     setTimeout(() => {
       setDownloadState(false);
